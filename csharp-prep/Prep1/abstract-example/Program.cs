@@ -7,5 +7,6 @@ Book anthem = new Book("Anthem","Ayn Rand");
 
 
 mistborn.Display();
+Console.WriteLine(mistborn.IsAvailable());
 
 anthem.Display();

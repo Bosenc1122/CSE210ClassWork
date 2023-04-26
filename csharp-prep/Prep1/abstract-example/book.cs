@@ -15,4 +15,9 @@ public class Book
     {
         Console.WriteLine($"{_name} by {_author}");
     }
+
+    public bool IsAvailable()
+    {
+        return _available;
+    }
 }

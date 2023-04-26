@@ -8,6 +8,11 @@ public class Book
     public Book(string name, string author)
     {
         _name = name;
-        author = author;
+        _author = author;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"{_name} by {_author}");
     }
 }

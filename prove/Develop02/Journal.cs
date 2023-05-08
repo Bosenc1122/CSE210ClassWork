@@ -1,7 +1,7 @@
 public class Journal
 {
 
-    List<Prompt> _prompts = new List<Prompt>();
+    List<Prompt> _prompt = new List<Prompt>();
 
     List<Entry> _entry = new List<Entry>();
 
@@ -16,8 +16,8 @@ public class Journal
      public void GetRandomPrompt()
     {
         var random = new Random();
-        var randomNumber = random.Next(0,_prompts.Count);
-        NicePrint(_prompts[randomNumber].GetPrompt());
+        var randomNumber = random.Next(0,_prompt.Count);
+        NicePrint(_prompt[randomNumber].GetPrompt());
     }
 
     public void ShowEntry()
@@ -33,6 +33,11 @@ public class Journal
         _entry.Add(entry);
     }
 
+    public void AddPrompt(Prompt prompt)
+    {
+        _prompt.Add(prompt);
+    }
+
     public void FindEntryByDate(string date)
     {
         foreach (Entry entry in _entry)
@@ -46,3 +51,4 @@ public class Journal
 
 
 }
+

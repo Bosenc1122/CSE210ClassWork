@@ -10,12 +10,12 @@ public class Menu
     public void Display()
     {
         string response = "";
-        string[] options = {"A","S","Q","F","R","P"};
+        string[] options = {"A","S","Q","F","R"};
         while(response!="Q")
         {
             while(options.Contains(response)==false)
             {
-                Console.Write("[A]dd entry:\n[S]how entrys\n[F]ind Quote by date\nNew [P]rompt\n[R]andom Prompt\n[Q]uit\n\nWhat do you want to do?");
+                Console.Write("[A]dd entry:\n[S]how entrys\n[F]ind Quote by date\n[R]andom Prompt\n[Q]uit\n\nWhat do you want to do?");
                 response = Console.ReadLine() ?? String.Empty;
                 response = response.ToUpper();
             }
@@ -40,13 +40,6 @@ public class Menu
                     Console.WriteLine("Please enter your date: ");
                     date = Console.ReadLine() ?? String.Empty;
                     myjournal.FindEntryByDate(date);
-                    break;
-                case "P":
-                    Console.WriteLine("Please enter the new Prompt: ");
-                    string prompt = Console.ReadLine() ?? String.Empty;
-                    
-                    
-                    myjournal.AddPrompt(new Prompt(prompt));
                     break;
                 case "R":
                     myjournal.GetRandomPrompt();

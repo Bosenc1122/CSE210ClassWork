@@ -3,6 +3,7 @@ public class Journal
 
     List<Prompt> _prompt = new List<Prompt>();
 
+
     List<Entry> _entry = new List<Entry>();
 
 
@@ -51,3 +52,4 @@ public class Journal
 
 
 }
+

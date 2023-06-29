@@ -15,7 +15,7 @@ namespace DungeonFighter
         public override short HealItems { get; set; } = 4;
         public double HealChance { get; set; } = 0.50;
 
-       public virtual void GiveDmg(Npc name)
+       public override void GiveDmg(Npc name)
         {
             //Check player accuracy 'IsSuccessful' method is true.
             if (IsSuccessful())

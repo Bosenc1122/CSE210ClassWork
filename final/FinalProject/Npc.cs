@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace KnightsAndWarlocks
+namespace DungeonFighter
 {
     enum NpcClasses { Warrior, Rogue, Mage }
     enum NpcRaces { Skeleton, Goblin, Troll }

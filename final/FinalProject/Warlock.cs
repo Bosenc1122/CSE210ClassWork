@@ -9,7 +9,7 @@ namespace DungeonFighter
     class Warlock : Player
     {
         public override string PlayerClass { get; protected set; } = "Warlock";
-        public override string HealItemsType { get; protected set; } = "Health Potion";
+        public override string HealItemsType { get; protected set; } = "Healing Spell";
         public override string _name { get; protected set; }
         protected override double _accuracyP { get; } = 0.80;
         public override short HealItems { get; set; } = 5;
@@ -57,7 +57,7 @@ namespace DungeonFighter
             if (Health > 0)
             {
                 Health = newHealth;
-                GameFunctions.AddToCombatLog($"{_name} drank a potion for {heal} health.");
+                GameFunctions.AddToCombatLog($"{_name} cast healing spell for {heal} health.");
                 HealItems--;
             }
             else

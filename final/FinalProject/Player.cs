@@ -30,7 +30,7 @@ namespace DungeonFighter
         public static Player ChooseClass()
         {
             Player firstPlayer = null;
-            Console.WriteLine("Type in the class you want to play: (Knight, Warlock or Barbarian)");
+            Console.WriteLine("Type in the class you want to play: (Knight, Warlock, Ranger or Barbarian)");
 
             while (firstPlayer == null)
             {
@@ -43,12 +43,15 @@ namespace DungeonFighter
                     case "WARLOCK":
                         firstPlayer = new Warlock();
                         break;
-                        case "BARBARIAN":
-                        firstPlayer = new Barbarian();
+                    case "RANGER":
+                        firstPlayer = new Ranger();
                         break;
+                    case "BARBARIAN":
+                        firstPlayer = new Barbarian();
+                        break; 
                     default:
                         Console.Clear();
-                        Console.WriteLine("Not a valid class, please enter 'Knight', 'Warlock' or 'Barbarian'");
+                        Console.WriteLine("Not a valid class, please enter 'Knight', 'Warlock', 'Ranger' or 'Barbarian'");
                         break;
                 }
             }
@@ -109,7 +112,7 @@ namespace DungeonFighter
             //Check player accuracy 'IsSuccessful' method is true.
             if (IsSuccessful())
             {
-                short dmg = GameFunctions.RndNext(17, 24);
+                short dmg = GameFunctions.RndNext(17, 28);
                 name.Health -= dmg;
 
                 //clamp health to not go below 0

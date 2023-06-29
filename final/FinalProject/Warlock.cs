@@ -19,7 +19,7 @@ namespace DungeonFighter
         {
             if (IsSuccessful())
             {
-                short dmg = GameFunctions.RndNext(10, 17);
+                short dmg = GameFunctions.RndNext(12, 23);
                 name.Health -= dmg;
 
                 if (name.Health < 0)

@@ -1,4 +1,4 @@
-10
+60
 Simple Goal:; Change Light Bulbs; Change Light Bulbs in House; 10; True
 Simple Goal:; Change Oil; Change Oil In Car; 50; False
 Eternal Goal:; Read More; Read More Good Books; 50; False

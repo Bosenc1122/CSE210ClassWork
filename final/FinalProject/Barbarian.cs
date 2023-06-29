@@ -11,7 +11,7 @@ namespace DungeonFighter
         public override string PlayerClass { get; protected set; } = "Barbarian";
         public override string HealItemsType { get; protected set; } = "Healing Leg of Lamb";
         public override string _name { get; protected set; }
-        protected override double _accuracyP { get; } = 0.60;
+        protected override double _accuracyP { get; } = 0.65;
         public override short HealItems { get; set; } = 4;
         public double HealChance { get; set; } = 0.50;
 
@@ -20,7 +20,7 @@ namespace DungeonFighter
             //Check player accuracy 'IsSuccessful' method is true.
             if (IsSuccessful())
             {
-                short dmg = GameFunctions.RndNext(20, 35);
+                short dmg = GameFunctions.RndNext(30, 50);
                 name.Health -= dmg;
 
                 //clamp health to not go below 0
@@ -59,7 +59,7 @@ namespace DungeonFighter
         {
             if (SpecialMoves > 0)
             {
-                short dmg = GameFunctions.RndNext(200, 300);
+                short dmg = GameFunctions.RndNext(220, 340);
                 GameFunctions.AddToCombatLog($"You yell summoning great inner strenghth and throw your axe which crushes the {name.NpcRace} for {dmg} damage!");
                 name.Health -= dmg;
                 SpecialMoves--;

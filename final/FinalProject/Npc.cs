@@ -7,8 +7,8 @@ using System.Threading;
 
 namespace DungeonFighter
 {
-    enum NpcClasses { Warrior, Rogue, Mage }
-    enum NpcRaces { Skeleton, Goblin, Troll }
+    enum NpcClasses { Mage, Warrior, Rogue, Archer, Brawler, Tamer }
+    enum NpcRaces { Goblin, Troll, Skeleton, Kobold, Demon, Orc }
 
     class Npc
     {
@@ -47,7 +47,7 @@ namespace DungeonFighter
         //Creates random enemy race.
         public void NpcEnemyRace()
         {
-            short rdmNpcRace = GameFunctions.RndNext(0, 3);
+            short rdmNpcRace = GameFunctions.RndNext(0, 6);
 
             switch (rdmNpcRace)
             {
@@ -60,13 +60,22 @@ namespace DungeonFighter
                 case 2:
                     NpcRace = NpcRaces.Troll;
                     break;
+                case 3:
+                    NpcRace = NpcRaces.Kobold;
+                    break;
+                case 4:
+                    NpcRace = NpcRaces.Demon;
+                    break;
+                case 5:
+                    NpcRace = NpcRaces.Orc;
+                    break;
             }
         }
 
         //Creates random enemy class.
         public void NpcEnemyClass()
         {
-            short rdmNpcClass = GameFunctions.RndNext(0, 3);
+            short rdmNpcClass = GameFunctions.RndNext(0, 6);
 
             switch (rdmNpcClass)
             {
@@ -78,6 +87,15 @@ namespace DungeonFighter
                     break;
                 case 2:
                     NpcClass = NpcClasses.Mage;
+                    break;
+                case 3:
+                    NpcClass = NpcClasses.Archer;
+                    break;
+                case 4:
+                    NpcClass = NpcClasses.Brawler;
+                    break;
+                case 5:
+                    NpcClass = NpcClasses.Tamer;
                     break;
             }
         }
@@ -118,6 +136,18 @@ namespace DungeonFighter
                         else if (NpcClass == NpcClasses.Mage)
                         {
                             GameFunctions.AddToEnemyLog($"The {NpcRace} {NpcClass} hurled a fireball at you for {dmg} damage!");
+                        }
+                        else if (NpcClass == NpcClasses.Archer)
+                        {
+                            GameFunctions.AddToEnemyLog($"The {NpcRace} {NpcClass} shot an arrow at you for {dmg} damage!");
+                        }
+                        else if (NpcClass == NpcClasses.Brawler)
+                        {
+                            GameFunctions.AddToEnemyLog($"The {NpcRace} {NpcClass} punched you for {dmg} damage!");
+                        }
+                        else if (NpcClass == NpcClasses.Tamer)
+                        {
+                            GameFunctions.AddToEnemyLog($"The {NpcRace} {NpcClass} sent a beast after you for {dmg} damage!");
                         }
                     }
                 }

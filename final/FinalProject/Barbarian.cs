@@ -17,13 +17,13 @@ namespace DungeonFighter
 
        public override void GiveDmg(Npc name)
         {
-            //Check player accuracy 'IsSuccessful' method is true.
+            
             if (IsSuccessful())
             {
                 short dmg = GameFunctions.RndNext(25, 50);
                 name.Health -= dmg;
 
-                //clamp health to not go below 0
+                
                 if (name.Health < 0) name.Health = 0;
                 else
                 {

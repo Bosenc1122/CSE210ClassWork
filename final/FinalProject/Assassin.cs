@@ -17,7 +17,7 @@ namespace DungeonFighter
 
        public override void GiveDmg(Npc name)
         {
-            //Check player accuracy 'IsSuccessful' method is true.
+            
             if (IsSuccessful())
             {
                 short dmg = GameFunctions.RndNext(11, 32);

@@ -30,7 +30,7 @@ namespace DungeonFighter
         public static Player ChooseClass()
         {
             Player firstPlayer = null;
-            Console.WriteLine("Type in the class you want to play: (Knight, Warlock, Ranger, Barbarian or Monk)");
+            Console.WriteLine("Type in the class you want to play: (Knight, Warlock, Ranger, Barbarian, Assassin or Monk)");
 
             while (firstPlayer == null)
             {
@@ -49,12 +49,15 @@ namespace DungeonFighter
                     case "BARBARIAN":
                         firstPlayer = new Barbarian();
                         break;
+                    case "ASSASSIN":
+                        firstPlayer = new Assassin();
+                        break; 
                     case "MONK":
                         firstPlayer = new Monk();
                         break; 
                     default:
                         Console.Clear();
-                        Console.WriteLine("Not a valid class, please enter 'Knight', 'Warlock', 'Ranger', 'Barbarian' or Monk");
+                        Console.WriteLine("Not a valid class, please enter 'Knight', 'Warlock', 'Ranger', 'Barbarian', 'Assassin' or Monk");
                         break;
                 }
             }

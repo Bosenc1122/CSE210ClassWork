@@ -20,7 +20,7 @@ namespace DungeonFighter
             //Check player accuracy 'IsSuccessful' method is true.
             if (IsSuccessful())
             {
-                short dmg = GameFunctions.RndNext(11, 32);
+                short dmg = GameFunctions.RndNext(16, 28);
                 name.Health -= dmg;
 
                 //clamp health to not go below 0
@@ -59,7 +59,7 @@ namespace DungeonFighter
         {
             if (SpecialMoves > 0)
             {
-                short dmg = GameFunctions.RndNext(150, 400);
+                short dmg = GameFunctions.RndNext(170, 350);
                 GameFunctions.AddToCombatLog($"You call forth the power of your deity against {name.NpcRace} for {dmg} damage!");
                 name.Health -= dmg;
                 SpecialMoves--;

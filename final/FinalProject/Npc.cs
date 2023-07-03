@@ -7,8 +7,8 @@ using System.Threading;
 
 namespace DungeonFighter
 {
-    enum NpcClasses { Mage, Warrior, Rogue, Archer, Brawler, Tamer }
-    enum NpcRaces { Goblin, Troll, Skeleton, Kobold, Demon, Orc }
+    enum NpcClasses { Mage, Warrior, Rogue, Archer, Brawler, Tamer, Shaman }
+    enum NpcRaces { Goblin, Troll, Skeleton, Kobold, Demon, Orc, Gnome }
 
     class Npc
     {
@@ -47,7 +47,7 @@ namespace DungeonFighter
         //Creates random enemy race.
         public void NpcEnemyRace()
         {
-            short rdmNpcRace = GameFunctions.RndNext(0, 6);
+            short rdmNpcRace = GameFunctions.RndNext(0, 7);
 
             switch (rdmNpcRace)
             {
@@ -69,13 +69,16 @@ namespace DungeonFighter
                 case 5:
                     NpcRace = NpcRaces.Orc;
                     break;
+                case 6:
+                    NpcRace = NpcRaces.Gnome;
+                    break;
             }
         }
 
         //Creates random enemy class.
         public void NpcEnemyClass()
         {
-            short rdmNpcClass = GameFunctions.RndNext(0, 6);
+            short rdmNpcClass = GameFunctions.RndNext(0, 7);
 
             switch (rdmNpcClass)
             {
@@ -96,6 +99,9 @@ namespace DungeonFighter
                     break;
                 case 5:
                     NpcClass = NpcClasses.Tamer;
+                    break;
+                case 6:
+                    NpcClass = NpcClasses.Shaman;
                     break;
             }
         }
@@ -148,6 +154,10 @@ namespace DungeonFighter
                         else if (NpcClass == NpcClasses.Tamer)
                         {
                             GameFunctions.AddToEnemyLog($"The {NpcRace} {NpcClass} sent a beast after you for {dmg} damage!");
+                        }
+                        else if (NpcClass == NpcClasses.Shaman)
+                        {
+                            GameFunctions.AddToEnemyLog($"The {NpcRace} {NpcClass} summoned an evil entity to attack for {dmg} damage!");
                         }
                     }
                 }

@@ -23,11 +23,20 @@ namespace DungeonFighter
                 short dmg = GameFunctions.RndNext(11, 32);
                 name.Health -= dmg;
 
-                //clamp health to not go below 0
+              
                 if (name.Health < 0) name.Health = 0;
                 else
                 {
                     GameFunctions.AddToCombatLog($"{_name} throws a dagger for {dmg} damage.");
+                    if (dmg >= 28)
+                    {
+                        GameFunctions.AddToCombatLog($"{_name} steals Health Potion from {name.NpcRace}");
+                        HealItems += 1;
+                    }
+                    else
+                    {
+                        GameFunctions.AddToCombatLog($"{_name} didn't steal any Items");
+                    }
                 }
             }
             else

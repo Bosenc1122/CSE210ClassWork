@@ -35,7 +35,7 @@ namespace DungeonFighter
                     }
                     else
                     {
-                        GameFunctions.AddToCombatLog($"{_name} didn't steal any Items");
+                        
                     }
                 }
             }

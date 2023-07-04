@@ -28,7 +28,17 @@ namespace DungeonFighter
                 else
                 {
                     GameFunctions.AddToCombatLog($"{_name} slashes their sword for {dmg} damage.");
+                    if (dmg >= 24)
+                    {
+                        GameFunctions.AddToCombatLog($"{_name}'s deity looks upon you with favor, adds one Healing prayer to you");
+                        HealItems += 1;
+                    }
+                    else
+                    {
+                       
+                    }
                 }
+                
             }
             else
             {
@@ -46,7 +56,7 @@ namespace DungeonFighter
             if (Health > 0)
             {
                 Health = newHealth;
-                GameFunctions.AddToCombatLog($"{_name} used Health Potion for {heal} health.");
+                GameFunctions.AddToCombatLog($"{_name} used Healing Prayer for {heal} health.");
                 HealItems--;
             }
             else

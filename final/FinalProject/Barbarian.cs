@@ -31,7 +31,7 @@ namespace DungeonFighter
                     if (dmg >= 49)
                     {
                         GameFunctions.AddToCombatLog($"{_name} gets a critical hit on {name.NpcRace} for another 50 damage");
-                        dmg += 50;
+                        name.Health -= 50;
                     }
                     else
                     {

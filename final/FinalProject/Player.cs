@@ -132,7 +132,7 @@ namespace DungeonFighter
                     if (dmg <= 20)
                     {
                         GameFunctions.AddToCombatLog($"{_name} bashes {name.NpcRace} with their shield for another 10 damage");
-                        dmg += 10;
+                        name.Health -= 10;
                     }
                     else
                     {

@@ -31,7 +31,7 @@ namespace DungeonFighter
                     if (dmg >= 23)
                     {
                         GameFunctions.AddToCombatLog($"{_name} kicks {name.NpcRace} for another 10 damage");
-                        dmg += 10;
+                        name.Health -= 10;
                     }
                     else
                     {

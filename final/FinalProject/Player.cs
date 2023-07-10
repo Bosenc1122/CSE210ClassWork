@@ -129,6 +129,15 @@ namespace DungeonFighter
                 else
                 {
                     GameFunctions.AddToCombatLog($"{_name} lunges ferociously for {dmg} damage.");
+                    if (dmg <= 20)
+                    {
+                        GameFunctions.AddToCombatLog($"{_name} bashes {name.NpcRace} with their shield for another 10 damage");
+                        dmg += 10;
+                    }
+                    else
+                    {
+                        
+                    }
                 }
             }
             else

@@ -30,7 +30,7 @@ namespace DungeonFighter
                     GameFunctions.AddToCombatLog($"{_name} throws a strong punch for {dmg} damage.");
                     if (dmg >= 23)
                     {
-                        GameFunctions.AddToCombatLog($"{_name} attacks {name.NpcRace} for another 10 damage");
+                        GameFunctions.AddToCombatLog($"{_name} kicks {name.NpcRace} for another 10 damage");
                         dmg += 10;
                     }
                     else

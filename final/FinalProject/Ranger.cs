@@ -28,6 +28,15 @@ namespace DungeonFighter
                 else
                 {
                     GameFunctions.AddToCombatLog($"{_name} shoots arrow for {dmg} damage.");
+                    if (dmg <= 22)
+                    {
+                        GameFunctions.AddToCombatLog($"{_name}'s animal companion attacks {name.NpcRace} for another 10 damage");
+                        dmg += 10;
+                    }
+                    else
+                    {
+                        
+                    }
                 }
             }
             else

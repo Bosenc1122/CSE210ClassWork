@@ -28,6 +28,15 @@ namespace DungeonFighter
                 else
                 {
                     GameFunctions.AddToCombatLog($"{_name} smashes axe down for {dmg} damage.");
+                    if (dmg >= 49)
+                    {
+                        GameFunctions.AddToCombatLog($"{_name} gets a critical hit on {name.NpcRace} for another 50 damage");
+                        dmg += 50;
+                    }
+                    else
+                    {
+                        
+                    }
                 }
             }
             else

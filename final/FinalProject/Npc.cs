@@ -17,7 +17,7 @@ namespace DungeonFighter
         public short Health { get; set; } = 100;
         private const double _accuracyN = 0.80;
         private double _turnChoice;
-        private const double _dropChance = 0.60;
+        private const double _dropChance = 0.40;
 
         //Constructor calls 2 functions to create an enemy.
         public Npc()

@@ -35,7 +35,7 @@ namespace DungeonFighter
                     npc.NpcChoice(player);
                     CombatMenu(player, npc);
                 }
-            }, null, TimeSpan.Zero, TimeSpan.FromSeconds(2));
+            }, null, TimeSpan.Zero, TimeSpan.FromSeconds(4));
         }
 
         public static void Main()
